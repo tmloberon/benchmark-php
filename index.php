@@ -20,7 +20,7 @@ set_time_limit(120); // 2 minutes
 $options = array();
 
 // Show or hide the server name and IP address
-$showServerName = false;
+$showServerName = true;
 
 // Optional: mysql performance test
 /*$options['db.host'] = '';
@@ -128,7 +128,7 @@ echo "<style>
     table tr:hover td {
         background: #f2f2f2;
         background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-        background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+        background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
     }
     </style>
     </head>
@@ -176,7 +176,7 @@ function test_math(&$result, $count = 99999)
 {
     $timeStart = microtime(true);
 
-    $mathFunctions = array("abs", "acos", "asin", "atan", "bindec", "floor", "exp", "sin", "tan", "pi", "is_finite", "is_nan", "sqrt");
+    $mathFunctions = array("abs", "acos", "asin", "atan", "floor", "exp", "sin", "tan", "pi", "is_finite", "is_nan", "sqrt");
     for ($i = 0; $i < $count; $i++) {
         foreach ($mathFunctions as $function) {
             call_user_func_array($function, array($i));
